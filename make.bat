@@ -31,7 +31,7 @@ GOTO error
 
 :dev
 	echo %PWD%
-	@docker run --rm -v %PWD%:/app -p 127.0.0.1:8000:8000 -p 127.0.0.1:8001:8001 -it %IMAGE% adev runserver --livereload --host localhost --port 8000 run.py
+	@docker run --rm -v %PWD%:/app -p 127.0.0.1:8000:8000 -p 127.0.0.1:8001:8001 -it %IMAGE% adev runserver --livereload --host 0.0.0.0 --port 8000 run.py
 	GOTO :EOF
 
 :run
